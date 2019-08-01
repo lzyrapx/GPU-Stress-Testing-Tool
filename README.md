@@ -6,6 +6,8 @@
 
 #### 3. cd GPU-Stress-Testing-Tool
 
-### 4. make
+#### 4. make
 
-### 5. ./gpu_burn 60 # will run 100% gpu for 60 seconds
+#### 5. ./gpu_burn 60 # will run 100% gpu for 60 seconds
+
+#### 6. check GPU status with ```nvidia-smi```

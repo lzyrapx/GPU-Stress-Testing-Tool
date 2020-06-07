@@ -8,6 +8,12 @@ CUDA_PATH?=/usr/local/cuda
 # If none of the above worked, try some other common paths
 ifneq ("$(wildcard $(CUDA_PATH))","")
 # The default PATH is good - nothing else to do
+else ifneq ("$(wildcard /usr/local/cuda-12.0)","")
+CUDA_PATH=/usr/local/cuda-12.0
+else ifneq ("$(wildcard /usr/local/cuda-11.0)","")
+CUDA_PATH=/usr/local/cuda-11.0
+else ifneq ("$(wildcard /usr/local/cuda-10.0)","")
+CUDA_PATH=/usr/local/cuda-10.0
 else ifneq ("$(wildcard /usr/local/cuda-9.0)","")
 CUDA_PATH=/usr/local/cuda-9.0
 else ifneq ("$(wildcard /usr/local/cuda-8.0)","")
